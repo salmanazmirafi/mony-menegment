@@ -1,8 +1,10 @@
+const { register } = require("../controllers/userCon");
+
 const userRouter = require("express").Router();
 
 // Register Route
 // localhost:400/api/users/register
-userRouter.post("/register");
+userRouter.post("/register", register);
 
 // Login Router
 // localhost:400/api/users/login

@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //route
 
-app.use("api/users/", userRouter);
+app.use("/api/users/", userRouter);
 
 app.get("/", (req, res) => {
   res.json({

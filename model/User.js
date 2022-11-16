@@ -5,25 +5,16 @@ const userScma = new mongoose.Schema({
     type: String,
     required: true,
     trim: true,
+    unique: true,
   },
   email: {
     type: String,
     required: true,
+    unique: true,
   },
   password: {
     type: String,
     required: true,
-  },
-  balance: Number,
-  income: Number,
-  expense: Number,
-  transactions: {
-    type: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "Transaction",
-      },
-    ],
   },
 });
 
